@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RetirePlanGUI",
+            "request": "launch",
+            "mainClass": "RetirePlanGUI",
+            "projectName": "Spendr_bbf6da53"
+        },
+        {
+            "type": "java",
             "name": "SpendrDemo",
             "request": "launch",
             "mainClass": "SpendrDemo",

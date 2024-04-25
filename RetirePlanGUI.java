@@ -3,14 +3,14 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SpendPlanGUI extends JFrame implements ActionListener {
+public class RetirePlanGUI extends JFrame implements ActionListener {
     private JTextField incomeField;
     private JButton calculateButton;
     private JTextArea balanceLabel;
 
-    public SpendPlanGUI() {
+    public RetirePlanGUI() {
         // Set up the frame
-        setTitle("Spending Plan Calculator");
+        setTitle("Retiring Plan Calculator");
         setSize(700, 700);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(3, 1)); // rows, cols, hgap, vgap
@@ -24,7 +24,7 @@ public class SpendPlanGUI extends JFrame implements ActionListener {
         incomeField.setSize(10, 10);
         
 
-        calculateButton = new JButton("Calculate Spend Plan");
+        calculateButton = new JButton("Calculate Retirement Plan");
         calculateButton.addActionListener(this);
         add(calculateButton);
 
@@ -67,17 +67,20 @@ public class SpendPlanGUI extends JFrame implements ActionListener {
             income = income - car;
 
             //fun money
-            double fun_money = income * 0.75;
+            double fun_money = income * 0.25;
             income = income - fun_money;
             
-            //investment
-            double investment = income * 0.5;
-            
             //retirement
-            double retirement = income * 0.5;
+            double retirement = income * 0.70;
+            income = income - retirement; 
+
+            //investment
+            double investment = income;
+            
+            
 
             
-            balanceLabel.setText("Budget Sheet: \nRent: $" + rent + "\nUtilities: $" + utilities + "\nInsurance: $" + insurance + "\nGroceries: $" + groceries + "\nPhone: $" + phone + "\nCar: $" + car + "\nSave: $" + investment + "\nRetirement: $" + retirement + "\nMoney to Spend: $" + fun_money);
+            balanceLabel.setText("Budget Sheet: \nRent: $" + rent + "\nUtilities: $" + utilities + "\nInsurance: $" + insurance + "\nGroceries: $" + groceries + "\nPhone: $" + phone + "\nCar: $" + car + "\nSave: $" + investment + "\nMoney to Spend: $" + fun_money + "\nRetirement: $" + retirement);
         } catch (NumberFormatException ex) {
             balanceLabel.setText("Please enter valid numbers.");
         }
@@ -85,7 +88,7 @@ public class SpendPlanGUI extends JFrame implements ActionListener {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            SpendPlanGUI frame = new SpendPlanGUI();
+            RetirePlanGUI frame = new RetirePlanGUI();
             frame.setVisible(true);
         });
     }

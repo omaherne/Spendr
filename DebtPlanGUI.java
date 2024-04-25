@@ -3,14 +3,14 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SpendPlanGUI extends JFrame implements ActionListener {
+public class DebtPlanGUI extends JFrame implements ActionListener {
     private JTextField incomeField;
     private JButton calculateButton;
     private JTextArea balanceLabel;
 
-    public SpendPlanGUI() {
+    public DebtPlanGUI() {
         // Set up the frame
-        setTitle("Spending Plan Calculator");
+        setTitle("Debt Plan Calculator");
         setSize(700, 700);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(3, 1)); // rows, cols, hgap, vgap
@@ -24,7 +24,7 @@ public class SpendPlanGUI extends JFrame implements ActionListener {
         incomeField.setSize(10, 10);
         
 
-        calculateButton = new JButton("Calculate Spend Plan");
+        calculateButton = new JButton("Calculate Debt Plan");
         calculateButton.addActionListener(this);
         add(calculateButton);
 
@@ -67,14 +67,14 @@ public class SpendPlanGUI extends JFrame implements ActionListener {
             income = income - car;
 
             //fun money
-            double fun_money = income * 0.75;
+            double fun_money = 0;
             income = income - fun_money;
             
             //investment
-            double investment = income * 0.5;
+            double investment = income * 0.9;
             
             //retirement
-            double retirement = income * 0.5;
+            double retirement = income * 0.1;
 
             
             balanceLabel.setText("Budget Sheet: \nRent: $" + rent + "\nUtilities: $" + utilities + "\nInsurance: $" + insurance + "\nGroceries: $" + groceries + "\nPhone: $" + phone + "\nCar: $" + car + "\nSave: $" + investment + "\nRetirement: $" + retirement + "\nMoney to Spend: $" + fun_money);
@@ -85,8 +85,9 @@ public class SpendPlanGUI extends JFrame implements ActionListener {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            SpendPlanGUI frame = new SpendPlanGUI();
+            DebtPlanGUI frame = new DebtPlanGUI();
             frame.setVisible(true);
         });
     }
 }
+
