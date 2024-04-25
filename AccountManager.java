@@ -54,7 +54,7 @@ public class AccountManager {
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 if (parts.length == 3) { // Ensure proper format
-                    User user = new User(parts[0], parts[1], parts[2]); // Username, Email, Hashed Password
+                    User user = new User(parts[0], parts[1], parts[2]); // Username, Email, Password
                     users.add(user);
                 }
             }

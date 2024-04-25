@@ -10,6 +10,13 @@
             "request": "launch",
             "mainClass": "SpendrDemo",
             "projectName": "Spendr_cc10e40b"
+        },
+        {
+            "type": "java",
+            "name": "SpendrGUI",
+            "request": "launch",
+            "mainClass": "SpendrGUI",
+            "projectName": "Spendr_cc10e40b"
         }
     ]
 }
