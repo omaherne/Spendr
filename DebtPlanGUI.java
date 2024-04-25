@@ -11,8 +11,8 @@ public class DebtPlanGUI extends JFrame implements ActionListener {
     public DebtPlanGUI() {
         // Set up the frame
         setTitle("Debt Plan Calculator");
-        setSize(700, 700);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setBounds(800, 150, 800, 600);
+        //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(3, 1)); // rows, cols, hgap, vgap
 
         // Create and add components
@@ -81,13 +81,6 @@ public class DebtPlanGUI extends JFrame implements ActionListener {
         } catch (NumberFormatException ex) {
             balanceLabel.setText("Please enter valid numbers.");
         }
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            DebtPlanGUI frame = new DebtPlanGUI();
-            frame.setVisible(true);
-        });
     }
 }
 

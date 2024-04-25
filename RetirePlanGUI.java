@@ -11,8 +11,8 @@ public class RetirePlanGUI extends JFrame implements ActionListener {
     public RetirePlanGUI() {
         // Set up the frame
         setTitle("Retiring Plan Calculator");
-        setSize(700, 700);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setBounds(800, 150, 800, 600);
+        //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(3, 1)); // rows, cols, hgap, vgap
 
         // Create and add components
@@ -84,12 +84,5 @@ public class RetirePlanGUI extends JFrame implements ActionListener {
         } catch (NumberFormatException ex) {
             balanceLabel.setText("Please enter valid numbers.");
         }
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            RetirePlanGUI frame = new RetirePlanGUI();
-            frame.setVisible(true);
-        });
     }
 }

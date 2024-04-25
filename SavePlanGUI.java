@@ -11,8 +11,8 @@ public class SavePlanGUI extends JFrame implements ActionListener {
     public SavePlanGUI() {
         // Set up the frame
         setTitle("Saving Plan Calculator");
-        setSize(700, 700);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setBounds(800, 150, 800, 600);
+        //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(3, 1)); // rows, cols, hgap, vgap
 
         // Create and add components
@@ -83,12 +83,4 @@ public class SavePlanGUI extends JFrame implements ActionListener {
             balanceLabel.setText("Please enter valid numbers.");
         }
     }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            SavePlanGUI frame = new SavePlanGUI();
-            frame.setVisible(true);
-        });
-    }
 }
-
