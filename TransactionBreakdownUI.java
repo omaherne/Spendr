@@ -3,6 +3,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
 
+// To run this program, compile it using javac and then run the compiled class file using java.
+// For example:
+// 1. Open Terminal.
+// 2. Navigate to the directory where this file is located.
+// 3. Compile the file using the following command:
+//    javac TransactionBreakdownUI.java
+// 4. Run the compiled program using the following command:
+//    java TransactionBreakdownUI
+
 public class TransactionBreakdownUI extends JFrame {
     public TransactionBreakdownUI() {
         setTitle("Spendr - Transaction Breakdown");
