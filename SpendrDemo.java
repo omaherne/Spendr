@@ -1,15 +1,13 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
-import java.io.Console;
 
 public class SpendrDemo{
     private static Scanner scanner = new Scanner(System.in);
     private static AccountManager accountManager = new AccountManager(); // Instantiate the AccountManager
 
     public static void main(String[] args) {
-        boolean running = true;
+        //This line initializes/display all the GUI
+        SpendrGUI LoginPage = new SpendrGUI();
+        /*boolean running = true;
 
         while (running) {
             System.out.println("Choose an option:");
@@ -73,6 +71,6 @@ public class SpendrDemo{
             System.out.println("Login successful!");
         } else {
             System.out.println("Invalid username or password.");
-        }
+        }*/
     }
 }
