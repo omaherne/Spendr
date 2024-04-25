@@ -1,8 +1,10 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 
-public class main{
+public class SpendrDemo{
     private static Scanner scanner = new Scanner(System.in);
     private static AccountManager accountManager = new AccountManager(); // Instantiate the AccountManager
 
@@ -40,7 +42,7 @@ public class main{
     private static void registerUser() {
         System.out.println("Register a new user:");
 
-        System.out.print("Username: ");
+        System.out.print("Enter Username: ");
         String username = scanner.nextLine();
 
         if (accountManager.getUserByUsername(username) != null) {
@@ -48,12 +50,10 @@ public class main{
             return;
         }
 
-        System.out.print("Email: ");
+        System.out.print("Enter Email: ");
         String email = scanner.nextLine();
 
-        System.out.print("Password: ");
         String password = scanner.nextLine();
-
         User newUser = new User(username, email, password); // Create a new user
         accountManager.addUser(newUser); // Add to the account manager
 
