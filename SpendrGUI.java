@@ -87,12 +87,7 @@ public class SpendrGUI {
 							loginPage.revalidate();
 							loginPage.repaint();
 						} else {
-							spendrHome = new JFrame("Spendr Home"); // homepage 
-							spendrHome.setBounds(800, 150, 800, 600);
-							spendrHome.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // makes the program to end when the window is closed
-							spendrHome.setResizable(true); // the window can be resizable
-							spendrHome.setLayout(null);
-							spendrHome.setVisible(true);
+							loginPage.setVisible(false);
 						}
 					}
 				});
