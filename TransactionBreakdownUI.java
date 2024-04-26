@@ -15,7 +15,6 @@ import java.util.Random;
 public class TransactionBreakdownUI extends JFrame {
     public TransactionBreakdownUI() {
         setTitle("Spendr - Transaction Breakdown");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 300);
 
         JPanel mainPanel = new JPanel();
