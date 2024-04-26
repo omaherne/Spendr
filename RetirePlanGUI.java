@@ -4,9 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class RetirePlanGUI extends JFrame implements ActionListener {
-    private JTextField incomeField;
-    private JButton calculateButton;
-    private JTextArea balanceLabel;
+    public JTextField incomeField;
+    public JButton calculateButton;
+    public JTextArea balanceLabel;
 
     public RetirePlanGUI() {
         // Set up the frame
