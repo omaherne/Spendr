@@ -10,4 +10,4 @@ To use Spendr, first download all the files. You can then either open it in VSCo
  4. Run the compiled program using the following command:
     java SpendrDemo
 
-There is an example demo video in the repository for your convenience.
+The features are windows that are stacked on top of each other. To see all the features, move the windows. The deployment diagram, product backlog, and scrum writeup are in the filed titled: Team Project - Final/SCRUM (Owen, Rohan, Kiwi, Philemon).
