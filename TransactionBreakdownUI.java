@@ -77,7 +77,7 @@ public class TransactionBreakdownUI extends JFrame {
         return transactions.toString();
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         SwingUtilities.invokeLater(TransactionBreakdownUI::new);
-    }
+    }*/
 }

@@ -12,7 +12,6 @@ public class RetirePlanGUI extends JFrame implements ActionListener {
         // Set up the frame
         setTitle("Retiring Plan Calculator");
         setBounds(800, 150, 800, 600);
-        //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(3, 1)); // rows, cols, hgap, vgap
 
         // Create and add components
